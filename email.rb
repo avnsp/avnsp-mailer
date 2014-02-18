@@ -4,7 +4,7 @@ Mail.defaults do
   delivery_method :smtp, { 
     :address              => "email-smtp.us-east-1.amazonaws.com",
     :port                 => 587,
-    :domain               => "cloudmqtt.com",
+    :domain               => "academian.se",
     :user_name            => ENV.fetch('SES_ACCESS_KEY'),
     :password             => ENV.fetch('SES_SECRET_KEY'),
     :authentication       => 'plain',
@@ -13,10 +13,10 @@ Mail.defaults do
 end
 
 class Email
-  def self.send sub, body
+  def self.send to, sub, body
     Mail.deliver do
-      from    'system@cloudmqtt.com'
-      to      'system@cloudmqtt.com'
+      from    'auth@academian.se'
+      to      to
       subject sub
       body    body
     end 
