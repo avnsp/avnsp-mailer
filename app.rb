@@ -11,8 +11,7 @@ class App
       Email.send("Välkommen till Academian", email_body)
     end
     subscribe("member.mailer.password_reset", "member.reset_password") do |_, msg|
-      plan = msg[:plan]
-      Email.send "[CloudMQTT] deleted #{plan}", JSON.pretty_generate(msg)
+      Email.send "[Academian] glömt lösenord", JSON.pretty_generate(msg)
     end
   end
 end
