@@ -2,13 +2,13 @@ GEM
   remote: https://rubygems.org/
   specs:
     amq-protocol (1.9.2)
-    bunny (1.0.7)
+    bunny (1.2.1)
       amq-protocol (>= 1.9.2)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
-    polyglot (0.3.3)
+    polyglot (0.3.4)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
