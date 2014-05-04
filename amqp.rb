@@ -4,7 +4,7 @@ require 'zlib'
 
 module Amqp
   def initialize
-    @conn = Bunny.new ENV['CLOUDAMQP_URL'] || 'amqp://guest:guest@localhost/cloudmqtt'
+    @conn = Bunny.new ENV['CLOUDAMQP_URL'] || 'amqp://guest:guest@localhost/avnsp'
     @conn.start
     @pub_ch = @conn.create_channel
     @consumers = []
